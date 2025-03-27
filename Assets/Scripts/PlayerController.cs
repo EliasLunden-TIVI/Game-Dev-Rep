@@ -29,7 +29,7 @@ public class PlayerController2D : MonoBehaviour
         if (canMoveDiagonally)
         {
             // Set movement direction based on input
-            movement = new Vector2(horizontalInput, verticalInput);
+            movement = new Vector2(horizontalInput, verticalInput).normalized;
             // Optionally rotate the player based on movement direction
             RotatePlayer(horizontalInput, verticalInput);
         }
